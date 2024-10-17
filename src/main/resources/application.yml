@@ -4,11 +4,12 @@ server:
 spring:
   application:
     name: jose
-  r2dbc: url:r2dbc:postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
+  r2dbc: 
+  url: r2dbc:postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
     #${DATABASE_URL}
     username: JG-ChatBot_owner
     #${DATABASE_USERNAME}
-    password:Qbr4YsUfdz6R
+    password: Qbr4YsUfdz6R
     #${DATABASE_PASSWORD}
   show-sql: true
   contentmoderator:
