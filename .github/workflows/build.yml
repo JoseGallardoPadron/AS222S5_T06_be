@@ -2,7 +2,7 @@ name: SonarCloud
 on:
   push:
     branches:
-      - main
+      - develop-spring-boot
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
