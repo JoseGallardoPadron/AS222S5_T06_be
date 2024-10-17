@@ -3,7 +3,7 @@ name: Publish to Docker/DockerHub
 on:
   push:
     branches:
-      - develop
+      - develop-spring-boot
 
 jobs:
   build:
