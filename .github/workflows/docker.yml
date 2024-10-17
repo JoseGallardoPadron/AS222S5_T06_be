@@ -8,16 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     env:
         DATABASE_URL: ${{ secrets.DATABASE_URL }}
         DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
         DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
         API_KEY: ${{ secrets.API_KEY }}
-        api_chatgpt_url: ${{secrets.api_chatgpt_url}
-        api_chatgpt_key: ${{secrets.api_chatgpt_key}}
-        api_chatgpt_host: ${{secrets.api_chatgpt_host}}
-    
+        API_CHATGPT_HOST: ${{ secrets.API_CHATGPT_HOST }}
+        API_CHATGPT_KEY: ${{ secrets.API_CHATGPT_KEY }}
+        API_CHATGPT_URL: ${{ secrets.API_CHATGPT_URL }}
 
     steps:
       - name: Check out source code
@@ -49,6 +47,7 @@ jobs:
 
       - name: Build and Push to Docker Hub
         uses: docker/build-push-action@v2
+       
         with:
           context: .  # Define el contexto de construcción
           file: Dockerfile  # Asegúrate de que el archivo Dockerfile esté en la raíz del repositorio
