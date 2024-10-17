@@ -27,13 +27,13 @@ public class ChatbotResponseService {
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
-    @Value("${api.chatgpt.url}")
+    @Value("${api_chatgpt_url}")
     private String apiUrl;
 
-    @Value("${api.chatgpt.key}")
+    @Value("${api_chatgpt_key}")
     private String apiKey;
 
-    @Value("${api.chatgpt.host}")
+    @Value("${api_chatgpt_host}")
     private String apiHost;
 
     public ChatbotResponseService(ChatInteractionRepository chatInteractionRepository, RestTemplate restTemplate,
