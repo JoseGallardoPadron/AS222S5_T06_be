@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/chatbot")
+@RequestMapping("/chatbot")
 public class ChatController {
 
     private final ChatbotResponseService chatbotResponseService;
