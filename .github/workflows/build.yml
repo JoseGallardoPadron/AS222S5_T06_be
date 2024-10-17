@@ -1,12 +1,9 @@
 name: SonarCloud
-
 on:
   push:
     branches:
       - develop-spring-boot
-
 jobs:
-  #SONARCLOUD 
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
