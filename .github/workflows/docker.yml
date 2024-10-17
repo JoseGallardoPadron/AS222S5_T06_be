@@ -9,6 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+        DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+        API_KEY: ${{ secrets.API_KEY }}
+        api_chatgpt_url: ${{secrets.api_chatgpt_url}
+        api_chatgpt_key: ${{secrets.api_chatgpt_key}}
+        api_chatgpt_host: ${{secrets.api_chatgpt_host}}
+    
+
     steps:
       - name: Check out source code
         uses: actions/checkout@v3
