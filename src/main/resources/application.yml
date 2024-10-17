@@ -5,13 +5,19 @@ spring:
   application:
     name: jose
   r2dbc:
-    url: ${DATABASE_URL}
-    #r2dbc:postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
-    username: ${DATABASE_USERNAME}
-    #JG-ChatBot_owner
-    password: ${DATABASE_PASSWORD}
-    #Qbr4YsUfdz6R
+    url:r2dbc:postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
+    #${DATABASE_URL}
+    username: JG-ChatBot_owner
+    #${DATABASE_USERNAME}
+    password:Qbr4YsUfdz6R
+    #${DATABASE_PASSWORD}
   show-sql: true
   contentmoderator:
-    apikey: ${API_KEY}
-    #ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
+    apikey:ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
+    #${API_KEY} 
+    # Configuración del servicio cognitivo
+api:
+  chatgpt:
+    url: https://chatgpt-ai-chat-bot.p.rapidapi.com/ask
+    key: ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
+    host: chatgpt-ai-chat-bot.p.rapidapi.com
