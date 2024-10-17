@@ -32,4 +32,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          API_KEY: ${{ secrets.API_KEY }}
+          API_CHATGPT_HOST: ${{ secrets.API_CHATGPT_HOST }}
+          API_CHATGPT_KEY: ${{ secrets.API_CHATGPT_KEY }}
+          API_CHATGPT_URL: ${{ secrets.API_CHATGPT_URL }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=JoseGallardoPadron_AS222S5_T06_be
