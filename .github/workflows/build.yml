@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - develop-spring-boot
-  pull_request:
-    types: [opened, synchronize, reopened]
 jobs:
   build:
     name: Build and analyze
